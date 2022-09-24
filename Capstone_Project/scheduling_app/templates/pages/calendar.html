@@ -1,0 +1,30 @@
+
+{% extends 'base.html' %} {% block content %}
+<div class="calendar_body">
+
+	<h1>Calendar</h1>
+	<div class="clearfix">
+		<a class="btn btn-info left" href="{% url 'calendar' %}?{{ prev_month }}"> Previous Month </a>
+		<a class="btn btn-info right" href="{% url 'calendar' %}?{{ next_month }}"> Next Month </a>
+		<a class="btn btn-info right" href="{% url 'event_new' %}"> New Event </a>
+	</div>
+
+
+<div id="cal_pos" class="container cal_pos">
+
+	{{ calendar }}
+
+</div>
+
+
+</div>
+<script>
+	document.addEventListener('DOMContentLoaded', (event) => {
+    const body = document.getElementsByTagName('body')[0]
+	const cal = document.getElementById('cal_pos')
+	const footer = document.getElementById('footer')
+	body.appendChild(footer);
+
+})
+</script>
+{% endblock %}
