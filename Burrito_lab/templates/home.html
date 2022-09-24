@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+    {%block content%}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Rabbit's Burritos</h1>
+          <p class="lead">They're made fast and full of carrots!!</p>
+        </div>
+      </div>
+
+
+    <div class="container">
+        <form action="/" method="post">
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-2 col-form-label">Name:</label>
+                <div class="col-sm-10">
+                    <input type="name" name="inputName" class="form-control" id="inputName" placeholder="Enter Name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Password:</label>
+                <div class="col-sm-10">
+                    <input type="password" name="inputPass" class="form-control" id="inputPassword3"
+                        placeholder="Password">
+                </div>
+            </div>
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Tortilla</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tortilla" id="gridRadios1"
+                                value="White flour" checked>
+                            <label class="form-check-label" for="gridRadios1">
+                                White Flour
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tortilla" id="gridRadios2"
+                                value="Wheat flour">
+                            <label class="form-check-label" for="gridRadios2">
+                                Wheat Flour
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tortilla" id="gridRadios3"
+                                value="Spinach">
+                            <label class="form-check-label" for="gridRadios3">
+                                Spinach
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Rice</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Rice" id="gridRadios11"
+                                value="White Rice" checked>
+                            <label class="form-check-label" for="gridRadios11">
+                                White Rice
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Rice" id="gridRadios22"
+                                value="Brown Rice">
+                            <label class="form-check-label" for="gridRadios22">
+                                Brown Rice
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Rice" id="gridRadios33" value="No Rice">
+                            <label class="form-check-label" for="gridRadios33">
+                                None
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Beans</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="beans" id="gridRadios111"
+                                value="Black Beans" checked>
+                            <label class="form-check-label" for="gridRadios111">
+                                Black beans
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="beans" id="gridRadios222"
+                                value="Refried Beans">
+                            <label class="form-check-label" for="gridRadios222">
+                                Refried beans
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="beans" id="gridRadios333"
+                                value="No Beans">
+                            <label class="form-check-label" for="gridRadios333">
+                                None
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Protein</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="protein" id="gridRadios1111"
+                                value="Chicken" checked>
+                            <label class="form-check-label" for="gridRadios1111">
+                                Chicken
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="protein" id="gridRadios2222"
+                                value="Carne Asada">
+                            <label class="form-check-label" for="gridRadios2222">
+                                Carne Asada
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="protein" id="gridRadios3333"
+                                value="Carnitas">
+                            <label class="form-check-label" for="gridRadios3333">
+                                Carnitas
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="protein" id="gridRadios4444"
+                                value="Sofritas">
+                            <label class="form-check-label" for="gridRadios4444">
+                                Sofritas
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="protein" id="gridRadios5555"
+                                value="No Protein">
+                            <label class="form-check-label" for="gridRadios5555">
+                                None
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+            </fieldset>
+            <div class="form-group row add_ingredients">
+                <div class="col-sm-2">Additional Ingredients:</div>
+                <div class="col-sm-10">
+                    <div class="form-check checkbox">
+                        <input name="check" value="cheese" class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">
+                            Cheese
+                        </label>
+                    </div>
+                    <div class="form-check checkbox">
+                        <input name="check" value="sour cream" class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">
+                            Sour Cream
+                        </label>
+                    </div>
+                    <div class="form-check checkbox">
+                        <input name="check" value="salsa" class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">
+                            Salsa
+                        </label>
+                    </div>
+                    <div class="form-check checkbox">
+                        <input name="check" value="gaucamole" class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">
+                            Gaucamole
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="deliveryin" class="col-sm-2 col-form-label">Delivery Instructions</label>
+                <div class="col-sm-10">
+                    <input type="name" name="delivIn" class="form-control deliv" id="deliveryin"
+                        placeholder="Enter Delivery instructions here">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+        <div class="final order">
+            <div class="card-header">
+                Hey {{name_from_form}}, your order is:
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{tortilla}} tortilla</li>
+                <li class="list-group-item">{{rice}}</li>
+                <li class="list-group-item">{{beans}}</li>
+                <li class="list-group-item">{{protein}}</li>
+
+            </ul>
+            <ul>
+                {% for ingre in add_ingred%}
+                <li>{{ingre}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://media.istockphoto.com/photos/two-halves-of-a-burrito-picture-id844233604?k=20&m=844233604&s=612x612&w=0&h=O2EM2KCBbfPd8jNP7NcAF5_r_zqzxUdQL1nGht1oQaI=" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">Food pills are superior to all other forms!!</p>
+            </div>
+          </div>
+
+
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {%endblock%}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
